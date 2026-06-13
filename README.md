@@ -137,19 +137,21 @@ resources/default/component/web/sidebar.mucrm.php
 Adicione abaixo da linha **48**:
 
 ```html
-<li>
-    <a href="{{ route('plugins.coin.index') }}"
-        class="flex items-center gap-3 px-3 py-2 text-sm text-zinc-300 hover:text-white hover:bg-white/5 rounded-lg transition-all group">
+@if(config('user.exchange.active))
+    <li>
+        <a href="{{ route('plugins.coin.index') }}"
+            class="flex items-center gap-3 px-3 py-2 text-sm text-zinc-300 hover:text-white hover:bg-white/5 rounded-lg transition-all group">
 
-        <i data-lucide="coins"
-           class="w-4 h-4 text-zinc-500 group-hover:text-zinc-400"></i>
+            <i data-lucide="coins"
+            class="w-4 h-4 text-zinc-500 group-hover:text-zinc-400"></i>
 
-        <span class="font-semibold">
-            {{ __lang('user.exchange.title') }}
-        </span>
+            <span class="font-semibold">
+                {{ __lang('user.exchange.title') }}
+            </span>
 
-    </a>
-</li>
+        </a>
+    </li>
+@endif
 ```
 
 ---
