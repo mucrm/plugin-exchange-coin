@@ -137,7 +137,7 @@ resources/default/component/web/sidebar.mucrm.php
 Adicione abaixo da linha **48**:
 
 ```html
-@if(config('user.exchange.active))
+@if(config('user.exchange.active'))
     <li>
         <a href="{{ route('plugins.coin.index') }}"
             class="flex items-center gap-3 px-3 py-2 text-sm text-zinc-300 hover:text-white hover:bg-white/5 rounded-lg transition-all group">
